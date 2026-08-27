@@ -145,10 +145,12 @@ Sistema-de-Gest-o-Banc-ria/
 
 ## 🎯 Roteiro de Desenvolvimento (Checklist)
 
-- [ ] **Etapa 1:** Criação da estrutura de pastas e arquivo `requirements.txt`.
-- [ ] **Etapa 2:** Implementação das classes de modelo (`Cliente`, `Conta`, `ContaCorrente`, `ContaPoupanca`, `Transacao`).
-- [ ] **Etapa 3:** Implementação da camada de armazenamento (`JSONStorage`).
-- [ ] **Etapa 4:** Implementação dos serviços de negócio e validações (`BancoService`).
-- [ ] **Etapa 5:** Construção das telas e tabelas com `Rich` (`CLIView`) e fluxo em `main.py`.
-- [ ] **Etapa 6:** Testes manuais de fluxo completo (depósito, saque, transferência, persistência).
+- [x] **Etapa 1:** Criação da estrutura de pastas e arquivo `requirements.txt`.
+- [x] **Etapa 2:** Implementação das classes de modelo (`Cliente`, `Conta`, `ContaCorrente`, `ContaPoupanca`, `Transacao`).
+- [x] **Etapa 3:** Implementação da camada de armazenamento (`JSONStorage`).
+- [x] **Etapa 4:** Implementação dos serviços de negócio e validações (`BancoService`).
+- [x] **Etapa 5:** Construção das telas e tabelas com `Rich` (`CLIView`) e fluxo em `main.py`.
+- [x] **Etapa 6:** Testes manuais de fluxo completo (depósito, saque, transferência, persistência).
 - [ ] **Etapa 7:** Inserção de capturas de tela/GIF demonstrativo no `README.md`.
+- [ ] **Etapa 8:** Criptografia de senhas adicionadas ao banco de dados usando hash.
+
