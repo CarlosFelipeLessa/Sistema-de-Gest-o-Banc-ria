@@ -1,6 +1,9 @@
 from src.services.banco_service import BancoService
 from src.views.cli_view import CLIView
 from rich.prompt import Prompt, FloatPrompt, IntPrompt
+from rich import print
+from pwinput import pwinput
+
 
 def main():
     service = BancoService()
@@ -14,7 +17,8 @@ def main():
             view.limpar_tela()
             view.exibir_banner()
             cpf = Prompt.ask("[bold cyan]Digite seu CPF[/bold cyan]")
-            senha = Prompt.ask("[bold cyan]Digite sua senha[/bold cyan]", password=True)
+            print(f"[bold cyan]Digite sua senha[/bold cyan]",end="")
+            senha = pwinput(": ")
 
             sucesso, msg, cliente = service.autenticar(cpf, senha)
             if not sucesso:
@@ -132,7 +136,8 @@ def main():
             view.exibir_banner()
             nome = Prompt.ask("[bold cyan]Nome Completo[/bold cyan]")
             cpf = Prompt.ask("[bold cyan]CPF (somente números ou com pontuação)[/bold cyan]")
-            senha = Prompt.ask("[bold cyan]Crie uma Senha[/bold cyan]", password=True)
+            print(f"[bold cyan]Crie uma Senha[/bold cyan]",end="")
+            senha = pwinput(": ")
 
             sucesso_cad, msg_cad = service.cadastrar_cliente(nome, cpf, senha)
             if sucesso_cad:
